@@ -1,0 +1,48 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  word-break: break-all;
+  border: 1px solid black;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.thumbnail {
+  width: 100%;
+  max-height: 200px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+}
+
+h3:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  float: right;
+}
+
+.card {
+  width: 200px;
+  height: 280px;
+}

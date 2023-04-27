@@ -1,0 +1,20 @@
+<div *ngIf="!selectedImage">
+  <div class="grid" *ngIf="!loading && data?.Results && data?.Results.length > 0">
+    <div class="grid-item" *ngFor="let record of data.Results">
+      <div class="card">
+        <img class="thumbnail" (click)="openImage(record.Internal.PathToKeyframe)" [src]="record.Internal.PathToKeyframeThumb" alt="Your Image Description">
+        <h3 (click)="goToDetails(record.Internal.RecordId)">{{record.Descriptive.Title}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex" *ngIf="loading">
+    <app-loader></app-loader>
+  </div>
+
+</div>
+
+<div class="image-container" *ngIf="selectedImage">
+  <button class="close-button" (click)="closeImage()">Close Image</button>
+  <img [src]="selectedImage" alt="">
+</div>
